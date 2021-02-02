@@ -9,8 +9,16 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
   + Tyrell: As the first decentralized cryptocurrency, bitcoin has grown immensely popular recently. If Bitcoin fulfills its potential  (transferring currency via the net with no fees, the same value in any country,  no account freezes, no arbitrary limits, etc) this could end up being our future world-wide used currency. With this in mind, I am hoping to use data to discover why bitcoin is increasing in value and popularity, uncover the risks, and possibly educate myself to understand how to use Bitcoin in the near future. 
 
 * What other examples of data driven project have you found related to this domain (share at least 3)?
+  + https://towardsdatascience.com/tagged/bitcoin - This project focuses on predicting Bitcoin pricing
+  + https://qdm12.github.io/BitcoinUses/results/ - This project focuses on Bitcoin usage since 2009. It seems to have been created for a project. 
+  + https://data.world/gabrielamiecz/bitcoin - Similar to the interest of our group, this data-driven project‘s goal was to find the main reason for the growing popularity of  Bitcoin. 
 
 * What data-driven questions do you hope to answer about this domain (share at least 3)?
+  + When was Bitcoin usage at its peak?
+  + How has Bitcoin’s value fluctuated?
+  + What is the total amount of circulating Bitcoin?
+  + How many Bitcoin transactions occur daily?
+  + How many Bitcoin/Blockchain wallets have been created?
 
 ## Finding Data
 
