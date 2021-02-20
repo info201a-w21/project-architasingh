@@ -24,7 +24,13 @@ source("SummaryInformation.R")
 
   In the summary information function, we made a list to store basic information like the number of rows/features. We then determined the highest ratings for both IMDb and Rotten Tomatoes and counted the number of the high ratings. 
 
+```{r, echo = FALSE}
+print(highest_IMDb_movies)
+```
+
 ## Table
+
+  We included the table because it provided insight to what the top 10 ranked IMDb movies out every movie streaming service, globally. We found that the highest rating was 9.3 and the lowest rating of was 9.0 for the top 10. We also found that the majority of the movies were from Hollywood.
 
 ## Pie Chart
 

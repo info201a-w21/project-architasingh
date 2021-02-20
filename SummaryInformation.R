@@ -1,10 +1,7 @@
 # This file contains analysis on the datasets themselves. 
 # One example would be numbers of rows/columns in the dataset.
 
-movies <- read.csv(paste0("C:\\Users\\treez\\OneDrive\\Documents\\info201\\",
-                   "project-architasingh\\Data\\",
-                   "MoviesOnStreamingPlatforms_updated.csv"),
-                   stringsAsFactors = FALSE)
+movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 # Create a list to store basic information like number of rows and 
 # features, then see what those features are.

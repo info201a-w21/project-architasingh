@@ -11,8 +11,8 @@ movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 # By the IMDb reviews column
 # The next line arranges the reviews in descending order from highest to lowest
 # The Last line in this section selects our desired observatons
- highest_IMDb_movies <- movies %>%
-  group_by(IMDb) %>%
+highest_IMDb_movies <- movies %>%
+   group_by(IMDb) %>%
    arrange(desc(IMDb)) %>%
    select(Title, IMDb) 
  
