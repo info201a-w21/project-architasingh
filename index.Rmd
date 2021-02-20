@@ -5,7 +5,7 @@ date: "2/19/2021"
 output: html_document
 ---
 ```{r, include = FALSE}
-chooseCRANmirror(graphics=FALSE, ind=1)
+chooseCRANmirror(graphics = FALSE, ind = 1)
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 source("pie_chart.R")
@@ -14,7 +14,7 @@ source("ReviewScatterplot.R")
 source("SummaryInformation.R")
 ```
 
-# Introduction
+## Introduction
 
   When we think about watching movies in the modern world, especially during the pandemic, we think about watching from the comfort of our homes. The popularity of Netflix, Amazon Prime, Disney +, and Hulu has rocketed in recent years due to their convenience as well as the quality content they provide to users. Our team is curious about the difference among these 4 major platforms and what characteristics set them apart from each other. 
 
@@ -24,7 +24,7 @@ source("SummaryInformation.R")
 
   In the summary information function, we made a list to store basic information like the number of rows/features. We then determined the highest ratings for both IMDb and Rotten Tomatoes and counted the number of the high ratings. 
 
-# Analyses
+## Table
 
 ## Pie Chart
 
@@ -37,7 +37,6 @@ print(pie_chart)
 ## Scatterplot
 
 
-
 ```{r, echo = FALSE}
 print(scatterplot)
 ```
@@ -47,5 +46,5 @@ print(scatterplot)
   We created the histogram to represent the relationship between the different streaming platforms and the number of movies that were available. We wanted to find out what streaming services had the most movies within the data set. This provided us with better context regarding each feature, and a better understanding of the influence of each of the movie-streaming platforms. The data showed that Amazon Prime offered the most content by far, with Netflix, Hulu, and Disney trailing behind. We were surprised to see that Amazon Prime had more content than Netflix since Netflix has a massive name for itself and is often seen as the go-to streaming platform. Disney+ coming in last, on the other hand, made sense to us because it is limited to movies created by Disney/Disney owned companies.
 
 ```{r, echo = FALSE}
-print()
+print(bargraph)
 ```

@@ -26,7 +26,7 @@ movies_data <- data.frame(
 )
 
 # This code creates the bar chart itself
-ggplot(movies_data, aes(x = streaming_services, y = number_of_movies)) +
+bargraph <- ggplot(movies_data, aes(x = streaming_services, y = number_of_movies)) +
   geom_bar(stat = "identity") +
   labs (
     title = "Amount of Movies Per Streaming Service"
