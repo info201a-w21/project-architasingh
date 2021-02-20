@@ -19,7 +19,7 @@ movies_filtered <- movies %>%
 
 # Code for the scatterplot. We figured there would be overlap so we added
 # an alpha value.
-ggplot(data = movies_filtered, aes(x = IMDb, y = Rotten.Tomatoes)) +
+scatterplot <- ggplot(data = movies_filtered, aes(x = IMDb, y = Rotten.Tomatoes)) +
   geom_point(alpha = 0.15
   ) +
   scale_x_continuous(limits = range(0,10)) +
