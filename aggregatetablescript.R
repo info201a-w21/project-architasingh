@@ -21,17 +21,3 @@ movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 highest_IMDb_movies <- head(highest_IMDb_movies, 10)
 
 View(highest_IMDb_movies)
- 
- 
-   
-            
-            
-            
-  
-
-  
-  
-  
-
-
-
