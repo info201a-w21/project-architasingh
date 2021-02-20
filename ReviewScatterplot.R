@@ -2,7 +2,7 @@
 # The two continuous variables that are used are: Rotten Tomatoes reviews and
 # the IMDb reviews
 
-movies <- read.csv("MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
+movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 # Converting Rotten Tomatoes percentages to numeric type.
 movies$Rotten.Tomatoes <- as.numeric(sub("%", "", movies$Rotten.Tomatoes))
