@@ -42,7 +42,8 @@ print(pie_chart)
 
 ## Scatterplot
 
-
+  The scatterplot shows the relationship between the Rotten Tomatoes and IMDb ratings. We found that its much easier to get 100% on Rotten Tomatoes than a 10 on IMDb (0 movies have a 10). There is a noticeable difference between the high ratings on Rotten Tomatoes and the high ratings on IMDb. Many movies rated between 2.5 and 5 on IMDb got a rating of 60% and higher on Rotten Tomatoes. Our findings made us curious about the reliability of these sites and whether one was more accurate than the other.
+  
 ```{r, echo = FALSE}
 print(scatterplot)
 ```
