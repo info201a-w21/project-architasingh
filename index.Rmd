@@ -12,6 +12,7 @@ source("pie_chart.R")
 source("bargraph.R")
 source("ReviewScatterplot.R")
 source("SummaryInformation.R")
+source("aggregatetablescript.R")
 ```
 
 ## Introduction
@@ -24,10 +25,6 @@ source("SummaryInformation.R")
 
   In the summary information function, we made a list to store basic information like the number of rows/features. We then determined the highest ratings for both IMDb and Rotten Tomatoes and counted the number of the high ratings. 
 
-```{r, echo = FALSE}
-print(highest_IMDb_movies)
-```
-
 ## Table
 
   We included the table because it provided insight to what the top 10 ranked IMDb movies out every movie streaming service, globally. We found that the highest rating was 9.3 and the lowest rating of was 9.0 for the top 10. We also found that the majority of the movies were from Hollywood.
@@ -37,7 +34,7 @@ print(highest_IMDb_movies)
   The pie chart was intended to show the proportion of movies that correlated with each age group. We found that the 13+ rating was the most common among all of the movies, as it made up a whopping 47.24% of rated movies. Due to this observation, we found that teenagers were a popular target audience. The least common rating was 16+, which made up only 4.35% of all of the rated movies. It is also important to note that these ranges indicate that the movie is viewable by people of a certain age **and up** so all of the content is technically adult-friendly. With this in mind, we found that there was a fair distribution of content among all ages, with plenty of content for kids and grandparents to enjoy.
 
 ```{r, echo = FALSE}
-print(pie_chart)
+pie_chart()
 ```
 
 ## Scatterplot
@@ -45,7 +42,7 @@ print(pie_chart)
   The scatterplot shows the relationship between the Rotten Tomatoes and IMDb ratings. We found that its much easier to get 100% on Rotten Tomatoes than a 10 on IMDb (0 movies have a 10). There is a noticeable difference between the high ratings on Rotten Tomatoes and the high ratings on IMDb. Many movies rated between 2.5 and 5 on IMDb got a rating of 60% and higher on Rotten Tomatoes. Our findings made us curious about the reliability of these sites and whether one was more accurate than the other.
   
 ```{r, echo = FALSE}
-print(scatterplot)
+scatterplot()
 ```
 
 ## Bar Graph
@@ -53,5 +50,5 @@ print(scatterplot)
   We created the histogram to represent the relationship between the different streaming platforms and the number of movies that were available. We wanted to find out what streaming services had the most movies within the data set. This provided us with better context regarding each feature, and a better understanding of the influence of each of the movie-streaming platforms. The data showed that Amazon Prime offered the most content by far, with Netflix, Hulu, and Disney trailing behind. We were surprised to see that Amazon Prime had more content than Netflix since Netflix has a massive name for itself and is often seen as the go-to streaming platform. Disney+ coming in last, on the other hand, made sense to us because it is limited to movies created by Disney/Disney owned companies.
 
 ```{r, echo = FALSE}
-print(bargraph)
+bargraph()
 ```

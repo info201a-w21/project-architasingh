@@ -19,5 +19,3 @@ highest_IMDb_movies <- movies %>%
 # The following code displays the first 10 indiciesin the newly arranged table
 # This also happens to be the top 10 rated IMDb movies world wide
 highest_IMDb_movies <- head(highest_IMDb_movies, 10)
-
-View(highest_IMDb_movies)
