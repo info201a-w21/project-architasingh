@@ -9,7 +9,6 @@ library("tidyr")
 
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
-
 pie_chart <- function() {
   #count how many movies were intended for people of each age group
   num_seven <- movies %>%
@@ -47,10 +46,6 @@ pie_chart <- function() {
   mycols <- c("#031A6B", "#004385", "#033860", "#087CA7", "#05B2DC")
   
   #create pie chart
-  
-
-  #Need to assign the pie chart to a variable so it can be returned
-  
   pie_chartt <- ggplot(age_group_amt.data, aes(x = "", y = prop, fill = Age_Group)) +
     geom_bar(width = 1, stat = "identity", color = "white") +
     coord_polar("y", start = 0)+
