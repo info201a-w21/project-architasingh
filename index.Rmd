@@ -23,14 +23,14 @@ source("aggregatetablescript.R")
 
 ## Summary
 
-  In the summary information function, we made a list to store basic information like the number of rows/features. We then determined the highest ratings for both IMDb and Rotten Tomatoes and counted the number of the high ratings. 
+  In the summary information function, we first made a list to store basic information like the number of observations/features. The number of observations was `r summary_info$num_observations` and the number of features was `r summary_info$num_features` and the names of the features were `r summary_info$feature_names`. We then determined the highest ratings for both IMDb and Rotten Tomatoes and counted the number of ratings with the highest value. The highest rating on IMDb had a value of `r summary_info$IMDb_highest_rating` and the number of ratings with this value was `r summary_info$num_IMDb_highest_rating`. The highest rating on Rotten Tomatoes was `r summary_info$RT_highest_rating` and the number of ratings with this value was `r summary_info$num_RT_highest_rating`.
 
 ## Table
 
   We included the table because it provided insight to what the top 10 ranked IMDb movies out every movie streaming service, globally. We found that the highest rating was 9.3 and the lowest rating of was 9.0 for the top 10. We also found that the majority of the movies were from Hollywood.
   
 ```{r, echo = FALSE}
-#highest_IMDb_movies()
+ag_table()
 ```
 
 ## Pie Chart

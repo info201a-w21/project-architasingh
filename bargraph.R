@@ -22,7 +22,7 @@ bargraph <- function() {
   # The name of the streaming service will be displayed on the x-axis
   # The number of movies are used to label the y-axis
   movies_data <- data.frame(
-    streaming_services = c("Netflix", "Hulu", "Prime.Video", "Disney."),
+    streaming_services = c("Netflix", "Hulu", "Prime Video", "Disney"),
     number_of_movies = c(netflix_sum, hulu_sum, prime_video_sum, disney_sum)
   )
   
