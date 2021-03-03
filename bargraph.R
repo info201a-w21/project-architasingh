@@ -5,7 +5,7 @@ movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 library(ggplot2)
 
-bargraph <- function(){
+bargraph <- function() {
   # This calculates the total number of Netflix movies in the data set
   netflix_sum <- sum(movies$Netflix)
   
@@ -27,10 +27,11 @@ bargraph <- function(){
   )
   
   # This code creates the bar chart itself
-  bargraph <- ggplot(movies_data, aes(x = streaming_services, y = number_of_movies)) +
+  bar_graph <- ggplot(movies_data, aes(x = streaming_services, y = number_of_movies)) +
     geom_bar(stat = "identity") +
-    labs (
-      title = "Amount of Movies Per Streaming Service"
-    )
-  return(bargraph)
+    labs (title = "Amount of Movies Per Streaming Service") +
+    ylab("Number of Movies") +
+    xlab("Streaming Services")
+  
+  return(bar_graph)
 }

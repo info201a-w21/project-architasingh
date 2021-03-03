@@ -51,6 +51,8 @@ pie_chart <- function() {
     coord_polar("y", start = 0)+
     geom_text(aes(y = lab.ypos, label = prop), color = "white") +
     scale_fill_manual(values = mycols) +
+    labs (title = "Movie Distribution Across Different Age Groups") +
+    labs(fill = 'Age Groups') +
     theme_void()
   return(pie_chartt)
 }
