@@ -1,6 +1,6 @@
 # This file contains analysis on the datasets themselves. 
 # One example would be numbers of rows/columns in the dataset.
-
+library(dplyr)
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 # Create a list to store basic information like number of rows and 
