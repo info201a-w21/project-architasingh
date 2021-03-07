@@ -59,7 +59,8 @@ pie_chart <- function() {
                                                fill = Age_Group)) +
     geom_bar(width = 1, stat = "identity", color = "white") +
     coord_polar("y", start = 0) +
-    geom_text(aes(y = lab.ypos, label = prop), color = "white") +
+    geom_text(aes(y = lab.ypos, label = paste0(prop, "%")), color = "white", 
+              size = 3) +
     scale_fill_manual(values = mycols) +
     labs (title = "Movie Distribution Across Different Age Groups") +
     labs(fill = 'Age Groups') +
