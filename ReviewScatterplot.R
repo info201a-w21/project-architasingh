@@ -6,10 +6,10 @@ library(dplyr)
 library(ggplot2)
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
-# Converting Rotten Tomatoes percentages to numeric type.
-movies$Rotten.Tomatoes <- as.numeric(sub("%", "", movies$Rotten.Tomatoes))
 
 scatterplot <- function() {
+  # Converting Rotten Tomatoes percentages to numeric type.
+  movies$Rotten.Tomatoes <- as.numeric(sub("%", "", movies$Rotten.Tomatoes))
   # Filtering movies to make sure they have both a value for IMDb and 
   # a value for Rotten Tomatoes. This is because we're trying to see how well
   movies_filtered <- movies %>%
