@@ -25,6 +25,8 @@ scatterplot <- function() {
     ) +
   ggtitle("Rotten Tomatoes vs IMDb Review") +
   xlab("IMDb Score") +
-  ylab("Rotten Tomatoes Score")
+  ylab("Rotten Tomatoes Score")  +
+  scale_size_area() +
+  scale_y_discrete(guide = guide_axis(n.dodge=3))
 return(scatterplot)
 }

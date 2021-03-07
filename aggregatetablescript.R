@@ -2,6 +2,7 @@
 # This file results in a data table that lists the top 10-ranked 
 # IMDb movies
 library(tidyverse)
+library(knitr)
 
 # This line downloads our 'movie' data set
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
@@ -10,14 +11,11 @@ movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 # By the IMDb reviews column
 # The next line arranges the reviews in descending order from highest to lowest
 # The Last line in this section selects our desired observatons
-ag_table <- function() {
-  highest_IMDb_movies <- movies %>%
-    group_by(IMDb) %>%
-    arrange(desc(IMDb)) %>%
-    select(Title, IMDb) 
+highest_IMDb_movies <- movies %>%
+  group_by(IMDb) %>%
+  arrange(desc(IMDb)) %>%
+  select(Title, IMDb) 
 
 # The following code displays the first 10 indiciesin the newly arranged table
 # This also happens to be the top 10 rated IMDb movies world wide
-  highest_IMDb_movies <- head(highest_IMDb_movies, 10)
-  return(highest_IMDb_movies)
-}
+highest_IMDb_movies <- kable(head(highest_IMDb_movies, 10))

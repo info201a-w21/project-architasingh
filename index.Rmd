@@ -30,7 +30,7 @@ source("aggregatetablescript.R")
   We included the table because it provided insight to what the top 10 ranked IMDb movies out every movie streaming service, globally. We found that the highest rating was 9.3 and the lowest rating of was 9.0 for the top 10. We also found that the majority of the movies were from Hollywood.
   
 ```{r, echo = FALSE}
-ag_table()
+highest_IMDb_movies
 ```
 
 ## Pie Chart
