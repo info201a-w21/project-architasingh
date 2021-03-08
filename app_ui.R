@@ -12,9 +12,27 @@ ui <- fluidPage(
         titlePanel("Introduction"),
             
         mainPanel(
-                h3("Introduction"),
-                p("Clearly introduces the purpose of the project (i.e., questions it seeks to answer) 
-                  and what datasets it will use to do so. Some visual flare (e.g., background image) is present."),
+                p(
+                "When we think about watching movies in the modern world, especially during the pandemic, we think about watching them from 
+                the comfort of our homes. The popularity of Netflix, Amazon Prime, Disney +, and Hulu has rocketed in recent years due to 
+                the convenience of streaming platforms as well as the quality content they provide to users." 
+                ),
+                
+                p(
+                "Our team is curious about the difference among these 4 major platforms and what specific characteristics set them apart 
+                from each other. Our data set contains information about the movies available on Netflix, Amazon Prime, Disney +, and Hulu 
+                and we found it on Kaggle."
+                ), 
+                
+                a("https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney"),
+               
+                br(""),
+                
+                p("We chose to work with this data set because it provides a wide range of information to work with, including everything 
+                from the directors to the countries the movies are available in. With the different types of data available, we were able 
+                to take a deeper look at what proportion of movies were intended for each age group, cross reference IMDb and Rotten Tomato 
+                ratings, and see the amount of movies available on each streaming service."
+                ),
         )
         
     ),
