@@ -2,6 +2,7 @@ library(dplyr)
 library(shiny)
 library(tidyverse)
 library(lintr)
+library(plotly)
 
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
@@ -60,13 +61,17 @@ ui <- fluidPage(
         
         sidebarLayout(
             sidebarPanel(
+                selectInput(inputId = "color",
+                            choices = c("red", "blue", "green"),label = "Choose a color")
             ),
             
             mainPanel(
-                plotOutput("movies_bargraph"),
-                p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
-                  Chart must be intentionally designed to reveal particular patterns in the data, 
-                  and meet course standards of labeling // clarity."),
+                plotlyOutput(outputId = "movies_bargraph"),
+                p("Our team decided to create this bar graph to show the number
+                  of movies that are currently being streamed among the different 
+                  streaming services. As seen above, Amazon Prime Video is currently streaming
+                  the most movies out of all the streaming services. The chart organizes each
+                  streaming service from most streamed movies to least, from left to right."),
             )
         )
     ),
