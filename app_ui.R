@@ -95,9 +95,11 @@ ui <- fluidPage(
             
             mainPanel(
                 plotlyOutput("movies_scatterplot"),
-                p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
-                  Chart must be intentionally designed to reveal particular patterns in the data, 
-                  and meet course standards of labeling // clarity."),
+                p("Our team has created this scatterplot to compare reviews from
+                  the provided sites, which in this case was Rotten Tomatoes and
+                  IMDb. As seen above, the reviews can vary wildly, with some
+                  movies receiving a perfect score from one site and receiving a
+                  mediocre review from another."),
             )
         )
     ),
@@ -107,8 +109,20 @@ ui <- fluidPage(
         titlePanel("Conclusion"),
        
         mainPanel(
-                p("Presents 3+ *specific takeaways* from the analysis, tying the project 
-                  back to the intention set out in the introduction."),
+            p(paste0("From our scatterplot that compares Rotten",
+                      " Tomatoes and IMDb reviews, one key takeaway is that",
+                      " review sites have wildly varying reviews. We observe",
+                      " this by filtering a low minimum for IMDb such as 5,",
+                      " and then filtering for a high minimum value such as",
+                      " 100 on the Rotten Tomatoes review (and vice versa).",
+                      " While we have not done formal testing, there are",
+                      " clearly data points with these contrasting scores,",
+                      " which could indicate that there are a significant number of films",
+                      " where review sites have wildly varying scores for.",
+                      
+                      " Users of these sites should therefore be wary that",
+                      " a film’s \"score\" from a review site is highly",
+                      "subjective.")),
         )
     )
 )

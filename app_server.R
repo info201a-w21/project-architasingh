@@ -30,7 +30,6 @@ server <- function(input, output) {
                 legend.title = element_text(color = "black", size = 9.5),
                 legend.text = element_text(color = "black", size = 8)
             )
-        ggplotly(barchart)
     })
     output$movies_bargraph <- renderPlotly({
         bar_graph <- plot_ly(movies_data, x = ~streaming_services,
@@ -42,9 +41,8 @@ server <- function(input, output) {
     })
     
     output$movies_scatterplot <- renderPlotly({
-        movies_filtered_input <- movies_filtered %>%
-            filter(IMDb >= input$IMDb_Min &
-                       Rotten.Tomatoes >= input$RT_Min)
+        movies_filtered_input <- movies_filtered %>% 
+            filter(IMDb >= as.numeric(input$IMDb_Min) & Rotten.Tomatoes >= as.numeric(input$RT_Min))
         
         scatterplot <- ggplot(data = movies_filtered_input) +
             geom_point(
