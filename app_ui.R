@@ -2,6 +2,7 @@ library(dplyr)
 library(shiny)
 library(tidyverse)
 library(lintr)
+library(plotly)
 
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
@@ -59,13 +60,17 @@ ui <- fluidPage(
         
         sidebarLayout(
             sidebarPanel(
+                selectInput(inputId = "color",
+                            choices = c("red", "blue", "green"),label = "Choose a color")
             ),
             
             mainPanel(
-                plotOutput("movies_bargraph"),
-                p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
-                  Chart must be intentionally designed to reveal particular patterns in the data, 
-                  and meet course standards of labeling // clarity."),
+                plotlyOutput(outputId = "movies_bargraph"),
+                p("Our team decided to create this bar graph to show the number
+                  of movies that are currently being streamed among the different 
+                  streaming services. As seen above, Amazon Prime Video is currently streaming
+                  the most movies out of all the streaming services. The chart organizes each
+                  streaming service from most streamed movies to least, from left to right."),
             )
         )
     ),
@@ -76,10 +81,17 @@ ui <- fluidPage(
         
         sidebarLayout(
             sidebarPanel(
+                selectInput(inputId = "IMDb_Min",
+                            choices = c("5", "6", "7", "8", "9", "10"),
+                            label = "IMDb Minimum Review Score"
+                ),
+                selectInput(inputId = "RT_Min",
+                            choices = c("50", "60", "70", "80", "90", "100"),
+                            label = "Rotten Tomatoes Minimum Review Score")
             ),
             
             mainPanel(
-                plotOutput("movies_scatterplot"),
+                plotlyOutput("movies_scatterplot"),
                 p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
                   Chart must be intentionally designed to reveal particular patterns in the data, 
                   and meet course standards of labeling // clarity."),

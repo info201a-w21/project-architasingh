@@ -16,19 +16,19 @@ scatterplot <- function() {
   movies_filtered <- movies %>%
     filter(!is.na(IMDb)) %>%
     filter(!is.na(Rotten.Tomatoes))
-
-# Code for the scatterplot. We figured there would be overlap so we added
-# an alpha value.
+  
+  # Code for the scatterplot. We figured there would be overlap so we added
+  # an alpha value.
   scatterplot <- ggplot(data = movies_filtered) +
     geom_point(
-    mapping = aes(x = IMDb, y = Rotten.Tomatoes),
-    alpha = .15
+      mapping = aes(x = IMDb, y = Rotten.Tomatoes),
+      alpha = .15
     ) +
-  ggtitle("Rotten Tomatoes vs IMDb Review") +
-  xlab("IMDb Score") +
-  ylab("Rotten Tomatoes Score")  +
-  scale_size_area()
-    
+    ggtitle("Rotten Tomatoes vs IMDb Review") +
+    xlab("IMDb Score") +
+    ylab("Rotten Tomatoes Score")  +
+    scale_size_area()
+  
   #scale_y_discrete(guide = guide_axis(n.dodge=3))
-return(scatterplot)
+  return(scatterplot)
 }
