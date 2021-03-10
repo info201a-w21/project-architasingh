@@ -2,12 +2,12 @@ library("ggplot2")
 library("dplyr")
 library("tidyr")
 
-#load csv file
+# load csv file
 movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 bar_chart <- function() {
   
-  #count how many movies belong to each age group for each platform
+  # count how many movies belong to each age group for each platform
   prime_num_seven <- movies %>%
     filter(Age == "7+") %>%
     filter(Prime.Video == "1") %>% 
@@ -108,7 +108,7 @@ bar_chart <- function() {
     filter(Disney. == "1") %>% 
     nrow()
   
-  #total amount of movies with listed age groups
+  # total amount of movies with listed age groups
   total <- prime_num_seven + prime_num_thirteen + prime_num_sixteen + 
     prime_num_eighteen + prime_num_all + netflix_num_seven + 
     netflix_num_thirteen + netflix_num_sixteen + netflix_num_eighteen + 
@@ -117,6 +117,7 @@ bar_chart <- function() {
     disney_num_thirteen + disney_num_sixteen + disney_num_eighteen + 
     disney_num_all
 
+  # make data frame with platform and age group data
   df <- data.frame(
     platform = rep(c("Amazon Prime", "Netflix","Hulu","Disney"), each = 5),
     ages = rep(c("7+","13+","16+", "18+", "all"), 4),
@@ -128,6 +129,9 @@ bar_chart <- function() {
             disney_num_seven,disney_num_thirteen, disney_num_sixteen, 
             disney_num_eighteen, disney_num_all)
   )
+  
+  df$ages <- factor(df$ages, levels=c("7+", "13+", "16+", "18+", "all"), 
+                    labels=c("7+", "13+", "16+", "18+", "all"))
   
   # Create the bar chart
   barchart <- ggplot(df, aes(x = ages, y = num_movies)) +

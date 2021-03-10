@@ -38,8 +38,8 @@ ui <- fluidPage(
     ),
     
     page_two <- tabPanel(
-        "Interactive Page 1",
-        titlePanel("Interactive Page 1"),
+        "Barchart",
+        titlePanel("Barchart"),
         
         sidebarLayout(
             sidebarPanel(
@@ -50,16 +50,19 @@ ui <- fluidPage(
             
             mainPanel(
                 plotlyOutput(outputId = "movies_barchart"),
-                p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
-                  Chart must be intentionally designed to reveal particular patterns in the data, 
-                  and meet course standards of labeling // clarity."),
+                p("Our team made this barchart so we could see what kind of
+                  content was available for different age groups on each 
+                  streaming platform. Since Amazon Prime has the most movies,
+                  it makes sense that it has the most movies for each age group.
+                  Netflix comes in second with a large amount of options for 
+                  each age group aside from 16+."),
             )
         )
     ),
     
     page_three <- tabPanel(
-        "Interactive Page 2",
-        titlePanel("Interactive Page 2"),
+        "Bargraph",
+        titlePanel("Bargraph"),
         
         sidebarLayout(
             sidebarPanel(
@@ -79,8 +82,8 @@ ui <- fluidPage(
     ),
     
     page_four <- tabPanel(
-        "Interactive Page 3",
-        titlePanel("Interactive Page 3"),
+        "Scatterplot",
+        titlePanel("Scatterplot"),
         
         sidebarLayout(
             sidebarPanel(
@@ -123,6 +126,14 @@ ui <- fluidPage(
                       " Users of these sites should therefore be wary that",
                       " a film’s \"score\" from a review site is highly",
                       "subjective.")),
+            p(paste0("Our barchart shows the amount of movies available for each age group
+            across each streaming platform. One key takeaway from this chart is that the best
+            platform for a younger audience is Disney, as it has primarily family-friendly content.
+            Its movie age ratings primarily fall under the 7+, 13+, and all ages categories.
+            All of the other platforms, Amazon Prime, Hulu, and Netflix, have a significant amount 
+            of adult content available for viewers. This takeaway was not very surprising, as Disney
+            is known to be a family-friendly brand, but it was interesting to directly compare its content
+            with that of the other three big streaming platforms."))
         )
     )
 )
