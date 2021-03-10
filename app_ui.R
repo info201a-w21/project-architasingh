@@ -21,7 +21,7 @@ ui <- fluidPage(
                 p(
                 "Our team is curious about the difference among these 4 major platforms and what specific characteristics set them apart 
                 from each other. Our data set contains information about the movies available on Netflix, Amazon Prime, Disney +, and Hulu 
-                and we found it on Kaggle."
+                and we found it on Kaggle:"
                 ), 
                 
                 a("https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney"),
@@ -34,7 +34,6 @@ ui <- fluidPage(
                 ratings, and see the amount of movies available on each streaming service."
                 ),
         )
-        
     ),
     
     page_two <- tabPanel(
