@@ -3,7 +3,7 @@ library(shiny)
 library(tidyverse)
 library(lintr)
 library(plotly)
-source("pie_chart.R")
+source("bar_chart.R")
 source("bargraph.R")
 source("ReviewScatterplot.R")
 
@@ -16,8 +16,21 @@ movies_filtered <- movies %>%
 
 
 server <- function(input, output) {
-    output$movies_piechart <- renderPlot({
-        pie_chart()
+    output$movies_barchart <- renderPlotly({
+        
+        # Create the bar chart
+        barchart <- ggplot(df, aes(x = ages, y = num_movies)) +
+            geom_col(aes(fill = platform), width = 0.6) +
+            xlab("Age Groups") +
+            ylab("Number of Movies") +
+            ggtitle("Movie Distribution Across Each Age Group") +
+            labs (fill = "Streaming Platforms") +
+            scale_size_area() +
+            theme (
+                legend.title = element_text(color = "black", size = 9.5),
+                legend.text = element_text(color = "black", size = 8)
+            )
+        ggplotly(barchart)
     })
     output$movies_bargraph <- renderPlotly({
         bar_graph <- plot_ly(movies_data, x = ~streaming_services,

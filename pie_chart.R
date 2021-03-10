@@ -11,18 +11,22 @@ movies <- read.csv("Data/MoviesOnStreamingPlatforms_updated.csv", header = TRUE)
 
 pie_chart <- function() {
   #count how many movies were intended for people of each age group
-  num_seven <- movies %>%
+  prime_num_seven <- movies %>%
     filter(Age == "7+") %>%
     nrow()
+
   num_thirteen <- movies %>%
     filter(Age == "13+") %>% 
     nrow()
+  
   num_sixteen <- movies %>%
     filter(Age == "16+") %>% 
     nrow()
+  
   num_eighteen <- movies %>%
     filter(Age == '18+') %>% 
     nrow()
+  
   num_all <- movies %>%
     filter(Age == "all") %>% 
     nrow()

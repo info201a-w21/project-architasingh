@@ -43,10 +43,13 @@ ui <- fluidPage(
         
         sidebarLayout(
             sidebarPanel(
+                selectInput(inputId = "Age Group",
+                            choices = c("7+","13+","16+", "18+", "all"),
+                            label = "Pick an Age Group")
             ),
             
             mainPanel(
-                plotOutput("movies_piechart"),
+                plotlyOutput(outputId = "movies_barchart"),
                 p("Creates a well laid out page with a set of 1+ controls that configure a chart. 
                   Chart must be intentionally designed to reveal particular patterns in the data, 
                   and meet course standards of labeling // clarity."),
@@ -61,7 +64,7 @@ ui <- fluidPage(
         sidebarLayout(
             sidebarPanel(
                 selectInput(inputId = "color",
-                            choices = c("red", "blue", "green"),label = "Choose a color")
+                            choices = c("light blue", "light green", "pink", "purple"),label = "Choose a color")
             ),
             
             mainPanel(
