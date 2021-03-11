@@ -19,14 +19,15 @@ ui <- fluidPage(
             ),
                 
             p("Our team is curious about the difference among these 4 major platforms and what specific characteristics set them apart 
-            from each other. Our data set contains information about the movies available on Netflix, Amazon Prime, Disney +, and Hulu 
-            and we found it on Kaggle:"
+            from each other. We would like to provide information that would help people answer: 'What streaming service will likely have 
+            what I want to watch?' Our data set contains information about the movies available on Netflix, Amazon Prime, Disney +, and 
+            Hulu and we found it on Kaggle:"
             ), 
                 
             a("https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney"),
                
             br(""),
-                
+
             p("We chose to work with this data set because it provides a wide range of information to work with, including everything 
             from the directors to the countries the movies are available in. With the different types of data available, we were able 
             to take a deeper look at what proportion of movies were intended for each age group, cross reference IMDb and Rotten Tomato 
@@ -115,6 +116,9 @@ ui <- fluidPage(
         titlePanel("Conclusion"),
        
         mainPanel(
+           
+            strong("Scatterplot"),
+            br(""),
             p(paste0("From our scatterplot that compares Rotten",
                       " Tomatoes and IMDb reviews, one key takeaway is that",
                       " review sites have wildly varying reviews. We observe",
@@ -127,8 +131,12 @@ ui <- fluidPage(
                       " where review sites have wildly varying scores for.",
                       
                       " Users of these sites should therefore be wary that",
-                      " a film’s \"score\" from a review site is highly",
+                      " a film’s \"score\" from a review site is highly ",
                       "subjective.")),
+            
+            br(""),
+            strong("Barchart"),
+            br(""),
             p(paste0("Our barchart shows the amount of movies available for each age group
             across each streaming platform. One key takeaway from this chart is that the best
             platform for a younger audience is Disney, as it has primarily family-friendly content.
@@ -136,7 +144,18 @@ ui <- fluidPage(
             All of the other platforms, Amazon Prime, Hulu, and Netflix, have a significant amount 
             of adult content available for viewers. This takeaway was not very surprising, as Disney
             is known to be a family-friendly brand, but it was interesting to directly compare its content
-            with that of the other three big streaming platforms."))
+            with that of the other three big streaming platforms.")),
+            
+            br(""),
+            strong("Bar Graph"),
+            br(""),
+            p(paste0("From our bar graph, a major takeway is the amount of movies that",
+                     " each service is currenly streaming. With Disney+, Hulu, Netflix, and Amazon",
+                     " Prime Video usage drastically increasing in recent years, it is key to ",
+                     "to understand how the amount of movies available to watch varies from ",
+                     "one streaming service to another. With this information, people who use our app will have the information ",
+                     "they need to find the streaming service that will most likely have the content they would like to see.",
+                     "Who knows...maybe understanding this distribution will help you decide where to watch your next movie!"))
         )
     )
 )
