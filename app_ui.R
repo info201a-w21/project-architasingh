@@ -54,7 +54,7 @@ ui <- fluidPage(
                   streaming platform. Since Amazon Prime has the most movies,
                   it makes sense that it has the most movies for each age group.
                   Netflix comes in second with a large amount of options for 
-                  each age group aside from 16+."),
+                  each age group."),
             )
         )
     ),
@@ -75,8 +75,10 @@ ui <- fluidPage(
                 p("Our team decided to create this bar graph to show the number
                   of movies that are currently being streamed among the different 
                   streaming services. As seen above, Amazon Prime Video is currently streaming
-                  the most movies out of all the streaming services. The chart organizes each
-                  streaming service from most streamed movies to least, from left to right."),
+                  the most movies out of all the streaming services. Disney is currently 
+                  streaming the least amount of movies. The chart organizes each streaming 
+                  service from the service with the least number of movies to the most, from 
+                  left to right."),
             )
         )
     ),
